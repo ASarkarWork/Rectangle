@@ -7,6 +7,8 @@ import static org.hamcrest.MatcherAssert.*;
 class RectangleTest {
     @Test
     public void shouldReturnAreaWhenLengthAndBreadthAreGiven() {
-        assertThat(20, is(equalTo(new Rectangle(4, 5).area())));
+        var rectangle = new Rectangle(4, 5);
+        int area = rectangle.area();
+        assertThat(area, is(equalTo(20)));
     }
 }
